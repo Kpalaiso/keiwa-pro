@@ -1,0 +1,168 @@
+page-about {
+    #chart {
+        width: 100%;
+        height: 300px;
+        margin: 20px auto;
+        display: block;
+    }
+    #chart .numbers {
+        width: 20px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        float: left;
+        position: relative;
+    }
+    #chart .numbers .max {
+        bottom: 100%;
+    }
+    #chart .numbers .half {
+        bottom: 50%;
+    }
+    #chart .numbers .zero {
+        bottom: -1px;
+    }
+    #chart .numbers li {
+        text-align: right;
+        padding-right: 1em;
+        list-style: none;
+        height: 29px;
+        border-bottom: 1px solid #444;
+        bottom: 30px;
+        position: absolute;
+        right: 0;
+        width: 30px;
+    }
+    #chart .numbers li:last-child {
+        height: 30px;
+    }
+    #chart .numbers li span {
+        color: #000;
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+    }
+    #chart .bars {
+        display: flex;
+        width: 190;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    #chart .bars li {
+        flex: auto;
+        height: 100%;
+        margin: 0;
+        text-align: center;
+        position: relative;
+        list-style: none;
+    }
+    #chart .bars li .bar {
+        width: 60%;
+        background: #49E;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -40%;
+        height: 0;
+        transition: height 1s;
+    }
+    #chart .bars li .per {
+        color: #888;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: -25px;
+        font-size: 12px;
+    }
+    #chart .bars li span {
+        color: #888;
+        width: 70%;
+        position: absolute;
+        bottom: -2em;
+        left: 0;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    
+
+
+    .montant_rapport{
+    position: absolute;
+    /* bottom: 0; */
+    right: 10px;
+    top: 22px;
+    font-size: 11px;
+    
+    color: #888;
+    border: solid 1px #ccc;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-family: 'OpenSans-Regular';
+    }
+
+    .list-md .item-block .item-inner {
+        border-bottom: 1px solid transparent;
+    }
+
+    .title_rapport{
+        font-size:14px;
+        font-family:'OpenSans-Semibold';
+        color:#666;
+    }
+
+    .desc_rapport{
+        font-size:11px;
+        font-family:'OpenSans-Light'; 
+        color:#8ba0b0; 
+        font-size:12px;
+    }
+
+    .opt_recette{
+        border:solid 1px #33c924;
+         color:#fff;
+     background:#33c924;
+    }
+
+    .opt_depense{
+        border:solid 1px #f53d3d;
+        color:#fff;
+        background:#f53d3d;
+    }
+
+    .opt_resultat{
+        border: solid 1px #ff7f00;
+    
+        color:#fff;
+        background:#ED7F10;
+    }
+
+    .opt_wallet{
+        border: solid 1px #f5d297;
+        color:#8d6c9f;
+        background:#f5d297;
+    }
+
+    .opt_banque{
+        border:solid 1px #ffeea3;
+        color:#967a44;
+        background:#ffeea3;
+    }
+
+    .opt_caisse{
+        border:solid 1px #f5ce85; 
+        color:#967a44; 
+        background:#f5ce85;
+    }
+
+    .img_items{
+        padding:2px; 
+        background-color:#eaeff5; 
+        width:45px !important; 
+        height:45px !important;
+    }
+
+
+}

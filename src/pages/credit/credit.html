@@ -1,0 +1,62 @@
+<!--
+  Generated template for the CreditPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="jauneor" >
+    <ion-title>credit</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeCredit()"><ion-icon name="close"></ion-icon></button>
+  </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div class="form-style-5">
+        <form>
+            <fieldset>
+
+                <label for="field1">Date *</label>
+                <input type="date" class="form-control" required="required" name="daterecette" placeholder="Date *">
+
+                <input type="text" class="form-control" required="required" name="libelerecette" placeholder="libellés *">
+
+                <select id="job" class="form-control" required="required" name="category">
+
+          <optgroup label="Catégorie">
+
+              <option value="journalier">catégory</option>
+            
+            <option value="journalier">client</option>
+            
+            <option value="hebdomadaire">fournisseur</option>
+           
+            
+          </optgroup>
+          </select>
+
+                <label for="field1">date de remboursement *</label>
+                <input type="date" class="form-control" required="required" name="daterecette" placeholder="Date *">
+
+
+                <input type="text" class="form-control" required="required" name="montantrecette" placeholder="Montant *">
+            </fieldset>
+            <fieldset>
+
+
+            </fieldset>
+            <input type="submit" value="Valider" />
+        </form>
+
+
+    </div>
+
+
+
+</ion-content>

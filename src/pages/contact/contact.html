@@ -1,0 +1,77 @@
+<ion-header>
+    <ion-toolbar color="primary">
+
+        <ion-buttons left>
+            <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"  ></ion-icon>
+          </button>
+
+        </ion-buttons>
+        <ion-title>
+
+            Paiement
+        </ion-title>
+
+    </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-segment [(ngModel)]="segment" color="blanc" style=" font-family:'OpenSans-Semibold'; font-weight:bold; ">
+            <ion-segment-button value="Caisse">
+                <img src="assets/imgs/compte.png" style="width:20px;" alt=""> <br> <span style="font-size: 9px;      position: absolute; top: 11px; left: 60px">mes comptes</span>
+            </ion-segment-button>
+            <ion-segment-button value="Banque">
+                <img src="assets/imgs/operation.png" style="width:20px;" alt=""> <br> <span style="font-size: 9px;      position: absolute; top: 11px; left: 60px">mes opérations</span>
+
+            </ion-segment-button>
+
+
+        </ion-segment>
+
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div [ngSwitch]="segment">
+
+        <div *ngSwitchCase="'Caisse'">
+
+
+            <div class="main">
+                <h4 style="margin-left:20px; font-family:'OpenSans-Light';">Shopping cart</h4>
+
+
+                <ion-list>
+                        <ion-item>
+                          <ion-avatar item-start>
+                            <img src="assets/imgs/kak-sozdat-elektronnij-koshelek.jpg">
+                          </ion-avatar>
+                          <h2>Cher</h2>
+                          <p>Ugh. As if.</p>
+                        </ion-item>
+                      </ion-list>
+
+
+                
+            </div>
+
+
+
+
+
+
+        </div>
+
+        <div *ngSwitchCase="'Banque'">
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-menu [content]="content" style="  ">
+
+    <ion-header>
+        <ion-toolbar color="primary">
+            <ion-title>Keiwa Pro</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+
+        <div id="mySidenav" class="sidenav" style="margin-top:20px;">
+                
+            <a href="#">
+                        <ion-icon class="icon_side_bar" name="ionitron"></ion-icon>Module supplémentaire
+            </a>
+
+            <a href="#">
+                    <ion-icon class="icon_side_bar" name="settings"></ion-icon>Paramètre
+            </a>
+
+           
+            <a href="#">
+                <ion-icon class="icon_side_bar" name="ios-school"></ion-icon>Formations
+            </a>
+            <a href="#">
+                <ion-icon class="icon_side_bar" name="share"></ion-icon>Invitez des amis</a>
+            
+           
+            <a href="#">
+                <ion-icon class="icon_side_bar" name="ios-chatbubbles"></ion-icon>Boite à suggestion
+            </a>
+
+            <a href="#">
+                <ion-icon class="icon_side_bar" name="md-log-in"></ion-icon>Déconnection 
+            </a>
+        </div>
+    </ion-content>
+
+</ion-menu>
+
+
+
+
+
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

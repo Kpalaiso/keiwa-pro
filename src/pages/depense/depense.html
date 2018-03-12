@@ -1,0 +1,55 @@
+<!--
+  Generated template for the RecettePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="danger">
+        <ion-title>Depense</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="closeDepense()"><ion-icon name="close"></ion-icon></button>
+        </ion-buttons>
+    </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+    <div class="form-style-5">
+        <form (ngSubmit)="registerDepense()" [formGroup]="depenseForm" depenseForm>
+            <fieldset>
+                <legend><span class="number"> <img src="assets/imgs/recette.png" style="width:23px; " alt=""> </span> Infos dépense</legend>
+                <label for="field1">Date *</label>
+                <input formControlName="datedepense" type="date" class="form-control" required="required" name="daterecette" placeholder="Date *">
+
+                <input type="text" formControlName="libeledepense" class="form-control" required="required" name="libelerecette" placeholder="libellés *">
+
+                <select id="job" class="form-control" formControlName="category" required="required" name="category">
+
+                  <optgroup label="Catégorie">
+                    
+                    <option value="journalier">journalier</option>
+                    
+                    <option value="hebdomadaire">hebdomadaire</option>
+                    <option value="mensuel">mensuel</option>
+                    <option value="annuel">annuel</option>
+                    
+                  </optgroup>
+                  </select>
+
+                <input type="text" formControlName="montantdepense" class="form-control" required="required" name="montantrecette" placeholder="Montant *">
+            </fieldset>
+            <fieldset>
+
+
+            </fieldset>
+            <input type="submit" value="Valider" />
+        </form>
+    </div>
+
+</ion-content>

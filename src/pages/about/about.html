@@ -1,0 +1,289 @@
+<ion-header>
+    <ion-navbar color="primary">
+
+        <ion-buttons left>
+            <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"  ></ion-icon>
+          </button>
+
+        </ion-buttons>
+        <ion-title>
+
+            Rapport
+        </ion-title>
+
+        <ion-buttons end>
+            
+    
+         
+        </ion-buttons>
+
+    </ion-navbar>
+    <ion-toolbar color="primary">
+        <ion-segment [(ngModel)]="segment" color="blanc" style=" font-family:'OpenSans-Semibold'; font-weight:bold; ">
+            <ion-segment-button value="exploitation">
+             <span style="font-weight:bold">mon point</span>
+            </ion-segment-button>
+            <ion-segment-button value="ratio">
+             <span style="  font-weight:bold">indicateur</span>
+            </ion-segment-button>
+
+
+        </ion-segment>
+
+
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+
+    <div [ngSwitch]="segment">
+
+        <div *ngSwitchCase="'exploitation'">
+
+
+            <ion-item  style=" background-color:#eaeff5; " >
+                <ion-label style="color:#8ba0b0; font-family:'OpenSans-Light';  " >votre point </ion-label>
+                <ion-select style="color:#8ba0b0;" [(ngModel)]="gender">
+                    <ion-option value="du jour" style="color:#8ba0b0; font-family:'OpenSans-Light'; " >du jour</ion-option>
+                    <ion-option value="de la semaine" style="color:#8ba0b0; font-family:'OpenSans-Light'; " >de la semaine</ion-option>
+                </ion-select>
+            </ion-item>
+
+          
+
+           
+
+            <ion-list >
+                <ion-item  style=" border-bottom: solid 1px #eaeff5; " >
+                  <ion-avatar item-start>
+                    <img src="assets/imgs/icons8-pièces-de-monnaie-48.png"  class="img_items" >
+                  </ion-avatar>
+                  <h2 class="title_rapport" >Mes recettes</h2>
+                  <p class="desc_rapport" >Mes ventes du jours...</p>
+                  <span  class="montant_rapport opt_recette" > 2500 FCFA </span>
+                </ion-item> 
+
+                <ion-item  style=" border-bottom: solid 1px #eaeff5; " >
+                    <ion-avatar item-start>
+                      <img src="assets/imgs/icons8-argent-liquide-en-main-48.png"  class="img_items" >
+                    </ion-avatar>
+                    <h2  class="title_rapport" >Mes dépenses</h2>
+                    <p class="desc_rapport" >Mes dépenses du jours...</p>
+                    <span  class="montant_rapport opt_depense"  > 2500 FCFA </span>
+                  </ion-item>
+
+                  <ion-item  >
+                    <ion-avatar item-start>
+                      <img src="assets/imgs/especes-monnaie-portefeuille-icone-4444-128.png"  class="img_items" >
+                    </ion-avatar>
+                    <h2 class="title_rapport" >Mes résultats</h2>
+                    <p class="desc_rapport" >Mon résultat du jours...</p>
+                    <span  class="montant_rapport opt_resultat" > 2500 FCFA </span>
+                  </ion-item>
+
+               
+
+                 
+
+                 
+                   
+
+              </ion-list>
+
+              <ion-item  style=" background-color:#eaeff5; margin-top:-8px;  " >
+                <ion-label style="color:#8ba0b0; font-family:'OpenSans-Light'; color:#8ba0b0; " >Mes crédits </ion-label>
+                <ion-select style="color:#8ba0b0;" [(ngModel)]="gender">
+                    <ion-option value="du jour" style="color:#8ba0b0; font-family:'OpenSans-Light'; " >du jour</ion-option>
+                    <ion-option value="de la semaine" style="color:#8ba0b0; font-family:'OpenSans-Light'; " >de la semaine</ion-option>
+                </ion-select>
+            </ion-item> 
+
+            
+            
+           <ion-list >
+               
+
+                <ion-item  style=" border-bottom: solid 1px #eaeff5; " >
+                    <ion-avatar item-start>
+                      <img src="assets/imgs/icons8-sac-d'argent-80.png" class="img_items" >
+                    </ion-avatar>
+                    <h2 class="title_rapport" >Mes créances</h2>
+                    <p class="desc_rapport" >Mes dépenses du jours...</p>
+                    <span  class="montant_rapport" style=" border:solid 1px #ad4e08; color:#fff; background-color:#ad4e08; " > 2500 FCFA </span>
+                  </ion-item>
+                  
+                  <ion-item  >
+                    <ion-avatar item-start>
+                      <img src="assets/imgs/icons8-tirelire-64.png"  class="img_items" >
+                    </ion-avatar>
+                    <h2 class="title_rapport" >Mes dettes</h2>
+                    <p class="desc_rapport" >Mon résultat du jours...</p>
+                    <span  class="montant_rapport" style="border:solid 1px #7e7e7e; color:#fff; background:#7e7e7e; " > 2500 FCFA </span>
+                  </ion-item>
+
+               
+
+                 
+
+                 
+                   
+
+              </ion-list>
+
+              <ion-item  style=" background-color:#eaeff5; " >
+                <ion-label style="color:#8ba0b0; font-family:'OpenSans-Light'; color:#8ba0b0; " >Ma trésorerie </ion-label>
+                <ion-select style="color:#8ba0b0;" [(ngModel)]="gender">
+                    <ion-option value="du jour" style="color:#8ba0b0; font-family:'OpenSans-Light'; " >du jour</ion-option>
+                    <ion-option value="de la semaine" style="color:#8ba0b0; font-family:'OpenSans-Light'; " >de la semaine</ion-option>
+                </ion-select>
+            </ion-item> 
+
+            <ion-list >
+
+                    <ion-item  style=" border-bottom: solid 1px #eaeff5; " >
+                            <ion-avatar item-start>
+                              <img src="assets/imgs/icons8-coffre-au-trésor-80.png"  style=" padding:2px; background-color:#eaeff5; width:45px; height:45px;  " >
+                            </ion-avatar>
+                            <h2 class="title_rapport" >Ma caisse </h2>
+                            <p class="desc_rapport" >Mes dépenses du jours...</p>
+                            <span  class="montant_rapport opt_caisse"  > 2500 FCFA </span>
+                          </ion-item>
+
+                <ion-item  style=" border-bottom: solid 1px #eaeff5; " >
+                  <ion-avatar item-start>
+                    <img  class="img_items" src="assets/imgs/icons8-musée-48.png"   >
+                  </ion-avatar>
+                  <h2 class="title_rapport" >Ma  banque</h2>
+                  <p class="desc_rapport" >Mes ventes du jours...</p>
+                  <span  class="montant_rapport opt_banque" > 2500 FCFA </span>
+                </ion-item> 
+
+               
+
+                  <ion-item  >
+                    <ion-avatar item-start>
+                      <img src="assets/imgs/icons8-paiement-mobile-64.png"  style=" padding:2px; background-color:#eaeff5; width:45px; height:45px;  " >
+                    </ion-avatar>
+                    <h2 class="title_rapport" >Mon wallet</h2>
+                    <p class="desc_rapport" >Mon résultat du jours...</p>
+                    <span  class="montant_rapport opt_wallet"  > 2500 FCFA </span>
+                  </ion-item>
+
+               
+
+                 
+
+                 
+                   
+
+              </ion-list>
+
+
+
+
+
+        </div>
+
+        <div *ngSwitchCase="'ratio'">
+
+
+
+            <div id="chart" padding>
+
+                <h4 style="font-size:18px; color:#444; margin-top:-20px; font-family:'OpenSans-Regular'; color:#8ba0b0; "> Evolution du chiffre d'affaire </h4>
+
+
+                <ul class="bars">
+                    <li>
+                        <div data-height="20" class="bar" style="height: 20%;">
+                            <div class="per">20</div>
+                        </div> <span>J</span> </li>
+                    <li>
+                        <div data-height="30" class="bar" style="height: 30%;">
+                            <div class="per">30</div>
+                        </div> <span>F</span> </li>
+                    <li>
+                        <div data-height="40" class="bar" style="height: 40%;">
+                            <div class="per">40</div>
+                        </div> <span>M</span> </li>
+                    <li>
+                        <div data-height="50" class="bar" style="height: 50%;">
+                            <div class="per">50</div>
+                        </div> <span>A</span> </li>
+                    <li>
+                        <div data-height="60" class="bar" style="height: 60%;">
+                            <div class="per">60</div>
+                        </div> <span>M</span> </li>
+                    <li>
+                        <div data-height="70" class="bar" style="height: 70%;">
+                            <div class="per">70</div>
+                        </div> <span>J</span> </li>
+                    <li>
+                        <div data-height="80" class="bar" style="height:80%;">
+                            <div class="per">80</div>
+                        </div> <span>J</span> </li>
+                    <li>
+                        <div data-height="90" class="bar" style="height: 90%;">
+                            <div class="per">90</div>
+                        </div> <span>A</span> </li>
+                </ul>
+
+
+
+
+
+            </div>
+
+            <div style=" margin-top:30px; "  padding>
+
+                <h4 style="font-size:16px; font-family: 'OpenSans-Regular'; color:#8ba0b0; ">Mes réserves sur les charges périodiques </h4>
+
+                <div style="position:relative;">
+
+                    <p style=" font-family: 'OpenSans-Light'; margin-top:5px; padding:10px 15px; background-color:#f4f7f8; "> <span style="font-size:16px; color:#8ba0b0;">  Electricité : </span> <span style="position:absolute; right:20px; font-size:16px; color:#8ba0b0; ">  10000 Fcfa </span> </p>
+
+                </div>
+
+                <div style="position:relative;">
+
+                    <p style=" font-family: 'OpenSans-Light'; margin-top:5px; padding:10px 15px; background-color:#f4f7f8; "> <span style="font-size:16px; color:#8ba0b0; ">   Loyer : </span> <span style="position:absolute; right:20px; font-size:16px; color:#8ba0b0; ">  10000 Fcfa </span> </p>
+
+                </div>
+
+                <div style="position:relative;">
+
+                    <p style=" font-family: 'OpenSans-Light'; margin-top:5px; padding:10px 15px; background-color:#f4f7f8; "> <span style="font-size:16px; color:#8ba0b0; ">   Internet : </span> <span style="position:absolute; right:20px; font-size:16px; color:#8ba0b0; ">  10000 Fcfa  </span> </p>
+
+                </div>
+
+            </div>
+
+            <div style=" margin-top:0px; " padding >
+
+                <h4 style="font-size:16px; font-family: 'OpenSans-Regular'; color:#8ba0b0; ">Mes réserves sur mon capital </h4>
+
+                <div style="position:relative;">
+
+                    <p style=" font-family: 'OpenSans-Light'; margin-top:5px; padding:10px 15px; background-color:#f4f7f8; "> <span style="font-size:16px; color:#8ba0b0; ">   Charge annuel: </span> <span style="position:absolute; right:20px; font-size:16px; color:#8ba0b0; ">  10000 Fcfa  </span> </p>
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+</ion-content>

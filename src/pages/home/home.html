@@ -1,0 +1,389 @@
+<ion-header>
+    <ion-navbar color="primary">
+
+        <ion-buttons left>
+            <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"  ></ion-icon>
+          </button>
+
+        </ion-buttons>
+        <ion-title>
+
+            Journal
+        </ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only>
+                <ion-icon name="search"></ion-icon>
+              </button> 
+    
+          <button ion-button  icon-only>
+            <ion-icon name="more"></ion-icon>
+          </button>
+        </ion-buttons>
+
+    </ion-navbar>
+    <ion-toolbar color="primary">
+        <ion-segment [(ngModel)]="segment" color="blanc" style=" font-family:'OpenSans-Light'; font-weight:bold; ">
+            <ion-segment-button value="Recette">
+                <span style=" font-weight:bold; " >   recette </span>
+            </ion-segment-button>
+            <ion-segment-button value="Depense">
+                <span style=" font-weight:bold; " > depense </span>
+            </ion-segment-button>
+
+            <ion-segment-button value="credit">
+               <span style=" font-weight:bold; " > credit </span> 
+            </ion-segment-button>
+
+        </ion-segment>
+
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div [ngSwitch]="segment">
+
+        <div *ngSwitchCase="'Recette'">
+
+            <div class=" banner_home " >
+                <span style="position: absolute; top: 10px; left:10px; z-index:100; "> <ion-icon style="  font-size: 35px " color="primary" name="ios-arrow-dropleft-circle"></ion-icon> </span>
+
+
+                <ion-list style=" margin-bottom:1px; width:100%; margin-left:-120px; ">
+                    <ion-item>
+                        <ion-label style="font-size:16px; text-align:center; color:#888; font-family:'OpenSans-Semibold'; "> </ion-label>
+                        <ion-select style=" color:#666; font-family:'OpenSans-Semibold';" [(ngModel)]="mois" placeholder="Decembre">
+                            <ion-option value="Decembre">Decembre</ion-option>
+                            <ion-option value="Janvier">Janvier</ion-option>
+                            <ion-option value="Fevrier">Fevrier</ion-option>
+                            <ion-option value="Mars">Mars</ion-option>
+                            <ion-option value="Avrile">Avrile</ion-option>
+                            <ion-option value="Mai">Mai</ion-option>
+                            <ion-option value="Juin">Juin</ion-option>
+                        </ion-select>
+                    </ion-item>
+                </ion-list>
+
+
+                <span style="position: absolute; top: 10px;  right:10px;"> <ion-icon style=" font-size: 35px; " color="primary" name="ios-arrow-dropright-circle"></ion-icon> </span>
+
+            </div>
+
+            <div class="messages_section dragscroll">
+                <div class="single_chat">
+                    <div class="image_container">
+                        <img src="assets/imgs/apple-1.png" alt="" srcset="">
+                    </div>
+                    <div class="content_container"  (click)="presentConfirm()" >
+                    <div class="content_container_inner">
+                        <p class="user_name" >
+                            <span style="color:#444; " >  Legumes </span>  <span class="more_info" > <ion-icon name="more"></ion-icon> </span> 
+
+                        </p>
+                        <p class="chat_content" style=" margin-top:-5px; " > ventes de tomate fraiches ... <span> 3 </span> </p>
+
+                    </div>
+                    </div>
+
+                </div>
+
+                <div class="single_chat">
+                        <div class="image_container">
+                            <img src="assets/imgs/corn.png" alt="" srcset="">
+                        </div>
+                        <div class="content_container">
+                        <div class="content_container_inner">
+                            <p class="user_name" >
+                                <span style="color:#444; " >  Legumes </span>  <span class="more_info" > <ion-icon name="more"></ion-icon> </span> 
+    
+                            </p>
+                            <p class="chat_content" style=" margin-top:-5px; " > ventes de tomate fraiches ... <span> 3 </span> </p>
+    
+                        </div>
+                        </div>
+    
+                    </div>
+
+                    <div class="single_chat">
+                            <div class="image_container">
+                                <img src="assets/imgs/cabbage.png" alt="" srcset="">
+                            </div>
+                            <div class="content_container">
+                            <div class="content_container_inner">
+                                <p class="user_name" >
+                                    <span style="color:#444; " >  Legumes </span>  <span class="more_info" > <ion-icon name="more"></ion-icon> </span> 
+        
+                                </p>
+                                <p class="chat_content" style=" margin-top:-5px; " > ventes de tomate fraiches ... <span> 3 </span> </p>
+        
+                            </div>
+                            </div>
+        
+                        </div>
+
+                        <div class="single_chat">
+                                <div class="image_container">
+                                    <img src="assets/imgs/carrot.png" alt="" srcset="">
+                                </div>
+                                <div class="content_container">
+                                <div class="content_container_inner">
+                                    <p class="user_name" >
+                                        <span style="color:#444; " >  Legumes </span>  <span class="more_info" > <ion-icon name="more"></ion-icon> </span> 
+            
+                                    </p>
+                                    <p class="chat_content" style=" margin-top:-5px; " > ventes de tomate fraiches ... <span> 3 </span> </p>
+            
+                                </div>
+                                </div>
+            
+                            </div>
+                            <div class="single_chat">
+                                    <div class="image_container">
+                                        <img src="assets/imgs/pear.png" alt="" srcset="">
+                                    </div>
+                                    <div class="content_container">
+                                    <div class="content_container_inner">
+                                        <p class="user_name" >
+                                            <span style="color:#444; " >  Legumes </span>  <span class="more_info" > <ion-icon name="more"></ion-icon> </span> 
+                
+                                        </p>
+                                        <p class="chat_content" style=" margin-top:-5px; " > ventes de tomate fraiches ... <span> 3 </span> </p>
+                
+                                    </div>
+                                    </div>
+                
+                                </div>  
+
+                                <div class="single_chat">
+                                        <div class="image_container">
+                                            <img src="assets/imgs/orange.png" alt="" srcset="">
+                                        </div>
+                                        <div class="content_container">
+                                        <div class="content_container_inner">
+                                            <p class="user_name" >
+                                                <span style="color:#444; " >  Legumes </span>  <span class="more_info" > <ion-icon name="more"></ion-icon> </span> 
+                    
+                                            </p>
+                                            <p class="chat_content" style=" margin-top:-5px; " > ventes de tomate fraiches ... <span> 3 </span> </p>
+                    
+                                        </div>
+                                        </div>
+                    
+                                    </div>
+            </div>
+
+
+           
+
+          
+
+           
+
+            
+
+           
+
+            
+
+            
+
+            <ion-fab right bottom fixed style="position:fixed; bottom:70px;">
+                <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
+                <ion-fab-list side="top">
+                    <button color="secondary" (click)="openRecette()" ion-fab><ion-icon name="create"></ion-icon></button>
+                    <button color="danger" (click)="speakRecette()" ion-fab><img src="assets/imgs/vocale.png" style="width:20px;" alt=""></button>
+
+
+                </ion-fab-list>
+            </ion-fab>
+        </div>
+
+        <div *ngSwitchCase="'Depense'">
+
+
+            <div class=" banner_home " >
+                <span style="position: absolute; top: 10px; left:10px; z-index:100; "> <ion-icon style="  font-size: 35px " color="danger" name="ios-arrow-dropleft-circle"></ion-icon> </span>
+
+
+                <ion-list style=" margin-bottom:1px; width:100%; margin-left:-120px; ">
+                    <ion-item>
+                        <ion-label style="font-size:16px; text-align:center; color:#888; font-family:'OpenSans-Semibold'; "> </ion-label>
+                        <ion-select style=" color:#666; font-family:'OpenSans-Semibold';" [(ngModel)]="mois" placeholder="Decembre">
+                            <ion-option value="Janvier">Janvier</ion-option>
+                            <ion-option value="Fevrier">Fevrier</ion-option>
+                            <ion-option value="Mars">Mars</ion-option>
+                            <ion-option value="Avrile">Avrile</ion-option>
+                            <ion-option value="Mai">Mai</ion-option>
+                            <ion-option value="Juin">Juin</ion-option>
+                        </ion-select>
+                    </ion-item>
+                </ion-list>
+
+
+                <span style="position: absolute; top: 10px;  right:10px;"> <ion-icon style=" font-size: 35px; " color="danger" name="ios-arrow-dropright-circle"></ion-icon> </span>
+
+            </div>
+
+
+           
+
+            
+
+          
+
+
+           
+
+          
+
+            <ion-fab right bottom fixed style="position:fixed; bottom:70px;">
+                <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+                <ion-fab-list side="top">
+                    <button color="secondary" (click)="openDepense()" ion-fab><ion-icon name="create"></ion-icon></button>
+                    <button color="danger" (click)="speakRecette()" ion-fab><ion-icon name="megaphone"></ion-icon></button>
+
+
+                </ion-fab-list>
+            </ion-fab>
+
+
+        </div>
+
+
+
+
+
+        <div *ngSwitchCase="'credit'" >
+
+
+
+          <!--  <div class="form-style-5">
+                <form>
+                    <fieldset>
+
+                        <label for="field1">Date *</label>
+                        <input type="date" class="form-control" required="required" name="daterecette" placeholder="Date *">
+
+                        <input type="text" class="form-control" required="required" name="libelerecette" placeholder="libellés *">
+
+                        <select id="job" class="form-control" required="required" name="category">
+
+                  <optgroup label="Catégorie">
+
+                      <option value="journalier">catégory</option>
+                    
+                    <option value="journalier">client</option>
+                    
+                    <option value="hebdomadaire">fournisseur</option>
+                   
+                    
+                  </optgroup>
+                  </select>
+
+                        <label for="field1">date de remboursement *</label>
+                        <input type="date" class="form-control" required="required" name="daterecette" placeholder="Date *">
+
+
+                        <input type="text" class="form-control" required="required" name="montantrecette" placeholder="Montant *">
+                    </fieldset>
+                    <fieldset>
+
+
+                    </fieldset>
+                    <input type="submit" value="Valider" />
+                </form>
+
+
+            </div>
+
+        -->
+        <div class="banner_home">
+            <span style="position: absolute; top: 10px; left:10px; z-index:100; "> <ion-icon style="  font-size: 35px; color:#fbad03; " name="ios-arrow-dropleft-circle"></ion-icon> </span>
+
+
+            <ion-list style=" margin-bottom:1px; width:100%; margin-left:-120px; ">
+                <ion-item>
+                    <ion-label style="font-size:16px; text-align:center; color:#888; font-family:'OpenSans-Semibold'; "> </ion-label>
+                    <ion-select style=" color:#666; font-family:'OpenSans-Semibold';" [(ngModel)]="mois" placeholder="Decembre">
+                        <ion-option value="Janvier">Janvier</ion-option>
+                        <ion-option value="Fevrier">Fevrier</ion-option>
+                        <ion-option value="Mars">Mars</ion-option>
+                        <ion-option value="Avrile">Avrile</ion-option>
+                        <ion-option value="Mai">Mai</ion-option>
+                        <ion-option value="Juin">Juin</ion-option>
+                    </ion-select>
+                </ion-item>
+            </ion-list>
+
+
+            <span style="position: absolute; top: 10px;  right:10px;"> <ion-icon style=" font-size: 35px; color:#fbad03; "  name="ios-arrow-dropright-circle"></ion-icon> </span>
+
+        </div>
+
+
+      
+
+
+        
+
+       
+
+      
+
+       
+
+       
+
+        <div *ngIf="saverecet.dataRecette!=undefined">
+            <div *ngFor='let recette of saverecet.dataRecette ' style="width:100%;">
+                <div style="width:60%;  float:left; background:#f7f7f9; padding:15px 15px; "> <span style=" font-size:16px; color:#666; font-family:'OpenSans-Regular'; ">{{recette.libelerecette}}</span> <br> <span style=" font-size:12px; color:#aaa; display: block;  margin-top: 5px; font-family:'OpenSans-Regular'; font-family:'OpenSans-Regular'; "> 22-02-12 10:25:36 </span>                        </div>
+                <div style="width:40%;  float:right;  text-align:right; background:#f7f7f9; padding:15px 15px;  "> <span style=" font-size:16px; color:#fbad03; font-family:'OpenSans-Regular'; ">{{recette.montantrecette}}Fcfa</span> <br> <span style=" font-size:12px; color:#aaa; display: block;  margin-top: 5px; font-family:'OpenSans-Regular'; font-family:'OpenSans-Regular'; "> catégory </span>                        </div>
+
+            </div>
+        </div>
+
+        <ion-fab right bottom fixed style="position:fixed; bottom:70px;">
+            <button ion-fab style="background-color:#fbad03; "><ion-icon name="add"></ion-icon></button>
+            <ion-fab-list side="top">
+                <button color="secondary" (click)="openCredit()" ion-fab><ion-icon name="create"></ion-icon></button>
+                <button color="danger" (click)="speakRecette()" ion-fab><ion-icon name="megaphone"></ion-icon></button>
+
+
+            </ion-fab-list>
+        </ion-fab>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+</ion-content>
